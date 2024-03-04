@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+int arr[5],i,n,value,mid,low=0,high=4,f=0;
+printf("enter the size os array:");
+scanf("%d",&n);
+printf("enter the element:");
+for(i=0;i<5;i++){
+scanf("%d",&arr[i]);
+}
+printf("enter the serach:");
+scanf("%d",&value);
+while(low<=high){
+mid=(low+high)/2;
+if(arr[mid]==value){
+f=1;
+break;
+}
+if(arr[mid]<value)
+low=mid+1;
+else
+high=mid-1;
+}
+if(f==1)
+printf("found in array %d",mid);
+else
+printf("not found");
+}
