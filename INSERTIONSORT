@@ -1,0 +1,29 @@
+#include<stdio.h>
+void insertionsort(int arr[],int n){
+int i,key,j;
+for(i=1;i<n;i++){
+key=arr[i];
+j=i-1;
+
+while(j>o&&arr[i]>key){
+arr[j+1]=arr[j];
+j=i-1;
+}
+arr[j+1]=key;
+printf("interation %d:",i);
+for(int k=0;k<n;k++){
+printf("%d",arr[k]);
+}
+printf("\n");
+}
+}
+int main(){
+int arr[]={11,83,20,75,44};
+int n=sizeof(arr)/sizeof(arr[0]);
+printf("original array:");
+for(int i=0;i<n;i++){
+printf("%d",arr[i]);
+}
+printf("\n");
+insertionsort(arr,n);
+}
